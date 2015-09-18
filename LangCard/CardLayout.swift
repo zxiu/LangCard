@@ -11,8 +11,6 @@ import UIKit
 class CardLayout: UICollectionViewLayout {
     private var _cellCount:Int?
     private var _collectSize:CGSize?
-    private var _center:CGPoint?
-    private var _radius:CGFloat?
     private var _rateCardSize : Double = 8.7 / 5.7
     private var _rateCardSpacing : Double = 1.0 / 4.0
     private var _countHorzizontal : Double = 4.0
@@ -26,12 +24,8 @@ class CardLayout: UICollectionViewLayout {
         super.prepareLayout()
         _collectSize = self.collectionView?.frame.size
         _cellCount = self.collectionView?.numberOfItemsInSection(0)
-        _center = CGPointMake(_collectSize!.width/2, _collectSize!.height/2)
-        _radius = min(_collectSize!.width,_collectSize!.height) / 2.5
-        
-        
         print(_collectSize)
-        _cardWidth = Double(_collectSize!.width) / Double(_countHorzizontal + (_countHorzizontal + 1) * _rateCardSpacing)
+        _cardWidth = Double((self.collectionView?.frame.size.width)!) / Double(_countHorzizontal + (_countHorzizontal + 1) * _rateCardSpacing)
         _cardHeight = _cardWidth! * _rateCardSize
         
     }

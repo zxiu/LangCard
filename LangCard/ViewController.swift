@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         default:
             break
         }
-        Config.instance
+        Resource.instance
     }
     
     func goGame(gameMode:GameMode){

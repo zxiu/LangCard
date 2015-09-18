@@ -17,10 +17,12 @@
 		AF02AB6E1BABEE9100DB3264 /* LangCardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02AB6D1BABEE9100DB3264 /* LangCardUITests.swift */; };
 		AF02AB7E1BABF22800DB3264 /* CardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02AB7C1BABF22800DB3264 /* CardLayout.swift */; settings = {ASSET_TAGS = (); }; };
 		AF02AB7F1BABF22800DB3264 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02AB7D1BABF22800DB3264 /* CardView.swift */; settings = {ASSET_TAGS = (); }; };
-		AF02AB811BABF24900DB3264 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02AB801BABF24900DB3264 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
+		AF02AB811BABF24900DB3264 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02AB801BABF24900DB3264 /* Resource.swift */; settings = {ASSET_TAGS = (); }; };
 		AF02AB841BABF25A00DB3264 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02AB821BABF25A00DB3264 /* GameViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AF02AB851BABF25A00DB3264 /* DownloadUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02AB831BABF25A00DB3264 /* DownloadUtil.swift */; settings = {ASSET_TAGS = (); }; };
-		AF02AB871BABF2D200DB3264 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = AF02AB861BABF2D200DB3264 /* config.json */; settings = {ASSET_TAGS = (); }; };
+		AF02AB871BABF2D200DB3264 /* resource.json in Resources */ = {isa = PBXBuildFile; fileRef = AF02AB861BABF2D200DB3264 /* resource.json */; settings = {ASSET_TAGS = (); }; };
+		AF02AB891BAC4B4E00DB3264 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02AB881BAC4B4E00DB3264 /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AF02AB8B1BAC4F0E00DB3264 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02AB8A1BAC4F0E00DB3264 /* Speech.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +59,12 @@
 		AF02AB6F1BABEE9100DB3264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF02AB7C1BABF22800DB3264 /* CardLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardLayout.swift; sourceTree = "<group>"; };
 		AF02AB7D1BABF22800DB3264 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		AF02AB801BABF24900DB3264 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		AF02AB801BABF24900DB3264 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		AF02AB821BABF25A00DB3264 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		AF02AB831BABF25A00DB3264 /* DownloadUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadUtil.swift; sourceTree = "<group>"; };
-		AF02AB861BABF2D200DB3264 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		AF02AB861BABF2D200DB3264 /* resource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resource.json; sourceTree = "<group>"; };
+		AF02AB881BAC4B4E00DB3264 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AF02AB8A1BAC4F0E00DB3264 /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,15 +117,17 @@
 			children = (
 				AF02AB7B1BABF21000DB3264 /* Layouts */,
 				AF02AB4A1BABEE9000DB3264 /* AppDelegate.swift */,
-				AF02AB801BABF24900DB3264 /* Config.swift */,
+				AF02AB8A1BAC4F0E00DB3264 /* Speech.swift */,
+				AF02AB801BABF24900DB3264 /* Resource.swift */,
 				AF02AB4C1BABEE9000DB3264 /* ViewController.swift */,
 				AF02AB821BABF25A00DB3264 /* GameViewController.swift */,
+				AF02AB881BAC4B4E00DB3264 /* DetailViewController.swift */,
 				AF02AB831BABF25A00DB3264 /* DownloadUtil.swift */,
 				AF02AB4E1BABEE9000DB3264 /* Main.storyboard */,
 				AF02AB541BABEE9000DB3264 /* Assets.xcassets */,
 				AF02AB561BABEE9000DB3264 /* LaunchScreen.storyboard */,
 				AF02AB591BABEE9000DB3264 /* Info.plist */,
-				AF02AB861BABF2D200DB3264 /* config.json */,
+				AF02AB861BABF2D200DB3264 /* resource.json */,
 				AF02AB511BABEE9000DB3264 /* LangCard.xcdatamodeld */,
 			);
 			path = LangCard;
@@ -259,7 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF02AB581BABEE9000DB3264 /* LaunchScreen.storyboard in Resources */,
-				AF02AB871BABF2D200DB3264 /* config.json in Resources */,
+				AF02AB871BABF2D200DB3264 /* resource.json in Resources */,
 				AF02AB551BABEE9000DB3264 /* Assets.xcassets in Resources */,
 				AF02AB501BABEE9000DB3264 /* Main.storyboard in Resources */,
 			);
@@ -287,13 +293,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF02AB841BABF25A00DB3264 /* GameViewController.swift in Sources */,
+				AF02AB891BAC4B4E00DB3264 /* DetailViewController.swift in Sources */,
 				AF02AB4D1BABEE9000DB3264 /* ViewController.swift in Sources */,
 				AF02AB531BABEE9000DB3264 /* LangCard.xcdatamodeld in Sources */,
 				AF02AB851BABF25A00DB3264 /* DownloadUtil.swift in Sources */,
 				AF02AB4B1BABEE9000DB3264 /* AppDelegate.swift in Sources */,
 				AF02AB7E1BABF22800DB3264 /* CardLayout.swift in Sources */,
 				AF02AB7F1BABF22800DB3264 /* CardView.swift in Sources */,
-				AF02AB811BABF24900DB3264 /* Config.swift in Sources */,
+				AF02AB811BABF24900DB3264 /* Resource.swift in Sources */,
+				AF02AB8B1BAC4F0E00DB3264 /* Speech.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

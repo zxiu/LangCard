@@ -8,13 +8,24 @@
 
 import Foundation
 
-class Config{
+class Resource{
+    static var isRelease = false
+    static var hostRelease = ""
+    static var hostDebug = "http://127.0.0.1:3000/"
+    static var host : String {
+        if isRelease {
+            return hostRelease
+        }else{
+            return hostDebug
+        }
+    }
+    
     static let dummyImageUrl = "http://www.dialfredo.com/wp-content/uploads/2015/05/redapplepic.jpg"
-    static let instance = Config()
+    static let instance = Resource()
     var categories:[Category] = []
     
     init(){
-        let jsonData = NSFileManager.defaultManager().contentsAtPath(NSBundle.mainBundle().resourcePath! + "/config.json")
+        let jsonData = NSFileManager.defaultManager().contentsAtPath(NSBundle.mainBundle().resourcePath! + "/resource.json")
         let jsonObject = (try? NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.AllowFragments)) as? NSDictionary
         
         print(jsonObject)
@@ -23,20 +34,23 @@ class Config{
             category.name = cateObj.objectForKey("name") as? String
             for entryObj in cateObj.objectForKey("entries") as! NSArray{
                 var entry : Entry = Entry()
-                entry.name = entryObj.valueForKey("name") as? String
-                entry.imageUri = NSURL(string: Config.dummyImageUrl)
+                entry.name = entryObj as? String
+                entry.imageUri = Resource.getEntryImageUrl(entry.name, categoryName: category.name)
                 category.entries.append(entry)
-                //println(entry)
             }
             print(category)
             categories.append(category)
         }
     }
+    
+    static func getEntryImageUrl(entryName:String, categoryName:String) ->String{
+        return host + "images/\(categoryName)/\(entryName).jpg"
+    }
 
     
     struct Category: CustomStringConvertible{
         var name:String!
-        var imageUri:NSURL!
+        var imageUri:String!
         var entries:[Entry] = []
         var description: String {
             return "Category name: \(name), entries: \(entries) \n"
@@ -46,9 +60,9 @@ class Config{
     
     struct Entry: CustomStringConvertible{
         var name:String!
-        var imageUri:NSURL!
-        var speechUri:NSURL!
-        var voiceUri:NSURL!
+        var imageUri:String!
+        var speechUri:String!
+        var voiceUri:String!
         var description: String {
             return "Entry name: \(name), imageUri: \(imageUri) \n"
         }

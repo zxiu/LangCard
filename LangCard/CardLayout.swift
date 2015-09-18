@@ -31,7 +31,7 @@ class CardLayout: UICollectionViewLayout {
         
         
         print(_collectSize)
-        _cardWidth = Double(_collectSize!.width) / Double(_countHorzizontal + (_countHorzizontal - 1) * _rateCardSpacing)
+        _cardWidth = Double(_collectSize!.width) / Double(_countHorzizontal + (_countHorzizontal + 1) * _rateCardSpacing)
         _cardHeight = _cardWidth! * _rateCardSize
         
     }
@@ -58,8 +58,8 @@ class CardLayout: UICollectionViewLayout {
         let indexRow = Double(Int(indexPath.item / Int(_countHorzizontal)))
         let indexColumn = Double(indexPath.item) - indexRow * _countHorzizontal
         
-        let x = indexColumn * _cardWidth! + (indexColumn) * _cardWidth! * _rateCardSpacing
-        let y = indexRow * _cardHeight! + (indexRow) * _cardHeight! * _rateCardSpacing
+        let x = indexColumn * _cardWidth! + (indexColumn + 1) * _cardWidth! * _rateCardSpacing
+        let y = indexRow * _cardHeight! + (indexRow + 1) * _cardHeight! * _rateCardSpacing
         
         attrs.frame = CGRect(x: x, y: y, width: _cardWidth!, height: _cardHeight!)
         return attrs

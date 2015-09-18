@@ -9,34 +9,33 @@
 import Foundation
 import UIKit
 class DownloadUtil{
-    static let documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-    static let fileManager = NSFileManager.defaultManager()
+    private static let documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+    private static let fileManager = NSFileManager.defaultManager()
     
-    static func loadImageFromNet(url:String) ->UIImage{
+    private static func loadImageFromNet(url:String) ->UIImage{
         let data = NSData(contentsOfURL: NSURL(string: url)!)
         return UIImage(data: data!)!
     }
-    
-    
-    static func saveImageToLocal(image:UIImage, fileName:String, type:String, path:String){
+    private static func saveImageToLocal(image:UIImage, fileName:String){
         let ext = NSString(string: fileName).pathExtension.lowercaseString
+        print(getFullPath(fileName))
         if (ext == "png"){
-            UIImagePNGRepresentation(image)!.writeToFile(path, atomically: true)
+            UIImagePNGRepresentation(image)!.writeToFile(getFullPath(fileName), atomically: true)
         }else if (ext == "jpg" || ext == "jpeg"){
-            UIImageJPEGRepresentation(image, 1.0)!.writeToFile(path, atomically: true)
+            UIImageJPEGRepresentation(image, 1.0)!.writeToFile(getFullPath(fileName), atomically: true)
         }
     }
     
-    static func loadImageFromLocal(fileName:String) ->UIImage{
+    private static func loadImageFromLocal(fileName:String) ->UIImage{
         return UIImage(contentsOfFile: getFullPath(fileName))!
     }
     
-    static func hasImageFromLocal(fileName:String) ->Bool{
+    private static func hasImageFromLocal(fileName:String) ->Bool{
         return fileManager.fileExistsAtPath(getFullPath(fileName))
     }
     
-    static func getFullPath(fileName:String) ->String{
-        return "\(documentsDirectoryPath)\\\(fileName)"
+    private static func getFullPath(fileName:String) ->String{
+        return "\(documentsDirectoryPath)/\(fileName)"
     }
     
     static func getImage(url:String) ->UIImage{
@@ -50,7 +49,8 @@ class DownloadUtil{
             print("load from local")
         }else{
             image = loadImageFromNet(url)
-             print("load from net")
+            saveImageToLocal(image, fileName: fileName)
+            print("load from net")
         }
         return image
     }

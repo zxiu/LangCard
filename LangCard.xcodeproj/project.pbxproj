@@ -23,6 +23,7 @@
 		AF02AB871BABF2D200DB3264 /* resource.json in Resources */ = {isa = PBXBuildFile; fileRef = AF02AB861BABF2D200DB3264 /* resource.json */; settings = {ASSET_TAGS = (); }; };
 		AF02AB891BAC4B4E00DB3264 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02AB881BAC4B4E00DB3264 /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AF02AB8B1BAC4F0E00DB3264 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02AB8A1BAC4F0E00DB3264 /* Speech.swift */; settings = {ASSET_TAGS = (); }; };
+		AF02AB8D1BB01B2D00DB3264 /* SoundUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02AB8C1BB01B2D00DB3264 /* SoundUtil.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		AF02AB861BABF2D200DB3264 /* resource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resource.json; sourceTree = "<group>"; };
 		AF02AB881BAC4B4E00DB3264 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AF02AB8A1BAC4F0E00DB3264 /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
+		AF02AB8C1BB01B2D00DB3264 /* SoundUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				AF02AB4C1BABEE9000DB3264 /* ViewController.swift */,
 				AF02AB821BABF25A00DB3264 /* GameViewController.swift */,
 				AF02AB881BAC4B4E00DB3264 /* DetailViewController.swift */,
+				AF02AB8C1BB01B2D00DB3264 /* SoundUtil.swift */,
 				AF02AB831BABF25A00DB3264 /* DownloadUtil.swift */,
 				AF02AB4E1BABEE9000DB3264 /* Main.storyboard */,
 				AF02AB541BABEE9000DB3264 /* Assets.xcassets */,
@@ -296,6 +299,7 @@
 				AF02AB891BAC4B4E00DB3264 /* DetailViewController.swift in Sources */,
 				AF02AB4D1BABEE9000DB3264 /* ViewController.swift in Sources */,
 				AF02AB531BABEE9000DB3264 /* LangCard.xcdatamodeld in Sources */,
+				AF02AB8D1BB01B2D00DB3264 /* SoundUtil.swift in Sources */,
 				AF02AB851BABF25A00DB3264 /* DownloadUtil.swift in Sources */,
 				AF02AB4B1BABEE9000DB3264 /* AppDelegate.swift in Sources */,
 				AF02AB7E1BABF22800DB3264 /* CardLayout.swift in Sources */,
@@ -447,7 +451,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LangCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zxiu.LangCard;
+				PRODUCT_BUNDLE_IDENTIFIER = io.zxiu.LangCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -461,7 +465,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LangCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zxiu.LangCard;
+				PRODUCT_BUNDLE_IDENTIFIER = io.zxiu.LangCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -534,6 +538,7 @@
 				AF02AB741BABEE9100DB3264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF02AB751BABEE9100DB3264 /* Build configuration list for PBXNativeTarget "LangCardTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +547,7 @@
 				AF02AB771BABEE9100DB3264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF02AB781BABEE9100DB3264 /* Build configuration list for PBXNativeTarget "LangCardUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +556,7 @@
 				AF02AB7A1BABEE9100DB3264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

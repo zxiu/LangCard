@@ -18,6 +18,5 @@ class Speech{
         utterance.rate = 0.3
         utterance.voice = AVSpeechSynthesisVoice(language:locale?.localeIdentifier)
         synthesizer.speakUtterance(utterance)
-
     }
 }

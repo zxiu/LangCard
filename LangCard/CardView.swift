@@ -14,14 +14,17 @@ class CardView: UIView {
     var frontImageView : UIImageView!
     var backView : UIImageView!
     var cell : UIView?
-    var showingBack = true
+    var showingFront = false
+    var showingBig = false
     var label : UILabel!
+    var entry : Resource.Entry?
     
     var frontImage : UIImage?{
         didSet{
             self.frontImageView.image = self.frontImage
         }
     }
+    
     var backImage : UIImage?{
         didSet{
             self.backView.image = self.backImage
@@ -31,7 +34,6 @@ class CardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         frontView = UIView(frame: frame)
-        
         
         frontImageView = UIImageView(frame: frame)
         frontImageView.layer.cornerRadius = 5.0
@@ -48,17 +50,15 @@ class CardView: UIView {
         
         frontView.addSubview(frontImageView)
         frontView.addSubview(label)
+        
         addSubview(frontView!)
         addSubview(backView!)
+         
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    
-
-
     
     
 

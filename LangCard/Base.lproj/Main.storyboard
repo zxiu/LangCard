@@ -17,64 +17,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKN-qB-JL8">
-                                <rect key="frame" x="150" y="100" width="300" height="400"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78O-4L-CpB">
-                                        <rect key="frame" x="0.0" y="136" width="300" height="29"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Battle">
-                                                    <attributes>
-                                                        <font key="NSFont" size="15" name="HelveticaNeue"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="clickMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TNl-UV-22R"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="menu_study" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsX-pf-fUB">
-                                        <rect key="frame" x="0.0" y="185" width="300" height="30"/>
-                                        <state key="normal" title="Study">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="clickMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lku-mw-gb6"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="menu_setting" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwd-Qt-Rmj">
-                                        <rect key="frame" x="0.0" y="235" width="300" height="30"/>
-                                        <state key="normal" title="Setting">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="clickMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dzJ-a1-CgN"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="GsX-pf-fUB" secondAttribute="trailing" id="0Bc-Wb-QcN"/>
-                                    <constraint firstItem="78O-4L-CpB" firstAttribute="leading" secondItem="gKN-qB-JL8" secondAttribute="leading" id="AgS-ys-pp7"/>
-                                    <constraint firstItem="GsX-pf-fUB" firstAttribute="leading" secondItem="gKN-qB-JL8" secondAttribute="leading" id="Cvo-yG-Ctc"/>
-                                    <constraint firstItem="Kwd-Qt-Rmj" firstAttribute="leading" secondItem="gKN-qB-JL8" secondAttribute="leading" id="SGP-xA-r4n"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kwd-Qt-Rmj" secondAttribute="trailing" id="ehp-D3-SE5"/>
-                                    <constraint firstAttribute="trailing" secondItem="78O-4L-CpB" secondAttribute="trailing" id="obu-aT-PWz"/>
-                                    <constraint firstItem="Kwd-Qt-Rmj" firstAttribute="top" secondItem="GsX-pf-fUB" secondAttribute="bottom" constant="20" id="vHg-ad-E0v"/>
-                                    <constraint firstItem="GsX-pf-fUB" firstAttribute="top" secondItem="78O-4L-CpB" secondAttribute="bottom" constant="20" id="ypv-8s-nJr"/>
-                                    <constraint firstAttribute="centerY" secondItem="GsX-pf-fUB" secondAttribute="centerY" id="yrR-hN-P54"/>
-                                </constraints>
-                            </view>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="menu_study" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsX-pf-fUB">
+                                <rect key="frame" x="280" y="171" width="40" height="30"/>
+                                <state key="normal" title="Study">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lku-mw-gb6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="menu_setting" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwd-Qt-Rmj">
+                                <rect key="frame" x="20" y="209" width="560" height="30"/>
+                                <state key="normal" title="Setting">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dzJ-a1-CgN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78O-4L-CpB">
+                                <rect key="frame" x="280" y="134" width="40" height="29"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Battle">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="clickMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TNl-UV-22R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="gKN-qB-JL8" secondAttribute="centerY" id="JfS-XD-WzB"/>
-                            <constraint firstAttribute="centerX" secondItem="gKN-qB-JL8" secondAttribute="centerX" id="afK-rf-h0J"/>
-                            <constraint firstItem="gKN-qB-JL8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="150" id="ojX-ZH-LwD"/>
-                            <constraint firstItem="gKN-qB-JL8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="rCO-7f-1IN"/>
+                            <constraint firstItem="78O-4L-CpB" firstAttribute="centerX" secondItem="Kwd-Qt-Rmj" secondAttribute="centerX" id="3dh-4W-hvf"/>
+                            <constraint firstItem="Kwd-Qt-Rmj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="86l-yE-g8S"/>
+                            <constraint firstItem="GsX-pf-fUB" firstAttribute="top" secondItem="78O-4L-CpB" secondAttribute="bottom" constant="8" symbolic="YES" id="CP2-JF-GFO"/>
+                            <constraint firstItem="78O-4L-CpB" firstAttribute="centerX" secondItem="GsX-pf-fUB" secondAttribute="centerX" id="CyB-Ni-r8c"/>
+                            <constraint firstItem="GsX-pf-fUB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rs7-Rx-ifh"/>
+                            <constraint firstItem="78O-4L-CpB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y3X-ac-kSH"/>
+                            <constraint firstItem="Kwd-Qt-Rmj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gzd-t8-BED"/>
+                            <constraint firstItem="78O-4L-CpB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="114" id="ivV-ou-V9i"/>
+                            <constraint firstItem="Kwd-Qt-Rmj" firstAttribute="top" secondItem="GsX-pf-fUB" secondAttribute="bottom" constant="8" symbolic="YES" id="vZG-e2-nGd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -136,7 +124,6 @@
         <!--Detail View Controller-->
         <scene sceneID="JXE-nX-REB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hhK-T0-zyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="detail" id="X4J-Rs-bP5" customClass="DetailViewController" customModule="LangCard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HKk-JD-0Ee"/>
@@ -148,6 +135,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhK-T0-zyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1966" y="433"/>
         </scene>
